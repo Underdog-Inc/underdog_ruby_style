@@ -8,16 +8,13 @@ Gem::Specification.new do |spec|
   spec.authors = ["Jerrod Carpenter"]
   spec.email = ["4128301+JerrodCarpenter@users.noreply.github.com"]
 
-  spec.summary = "TODO: Write a short summary, because RubyGems requires one."
-  spec.description = "TODO: Write a longer description or delete this line."
-  spec.homepage = "TODO: Put your gem's website or public repo URL here."
-  spec.required_ruby_version = ">= 2.6.0"
-
-  spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
+  spec.summary = "Underdog Ruby Style Guide"
+  spec.description = "Underdog Ruby Style Guide"
+  spec.homepage = "https://github.com/Underdog-Inc/underdog_ruby_style.git"
+  spec.required_ruby_version = ">= 3.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["source_code_uri"] = "https://github.com/Underdog-Inc/underdog_ruby_style.git"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
@@ -35,4 +32,10 @@ Gem::Specification.new do |spec|
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
+  spec.add_dependency "rubocop", "1.25.1"
+  spec.add_dependency "rubocop-minitest"
+  spec.add_dependency "rubocop-performance"
+  spec.add_dependency "rubocop-rails"
+  spec.add_development_dependency "bundler", "~> 2.3"
+  spec.add_development_dependency "rake", "~> 13.0"
 end
