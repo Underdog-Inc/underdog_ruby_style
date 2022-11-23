@@ -1,0 +1,171 @@
+require:
+  - 'rubocop-rails'
+  - 'rubocop-performance'
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - /docs/**/*
+    - tmp/**/*
+    - vendor/**/*
+    - engines/**/vendor/**/*
+    - /**/migrate/*.rb
+    - /**/log
+    - /**/*/structure.sql
+    - .irbrc
+
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - development
+    - test
+    - staging
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Style/Documentation:
+  Enabled: false
+
+Layout/LineLength:
+  IgnoredPatterns: ['(\A|\s)#']
+  Exclude:
+    - /**/config/initializers/devise.rb
+    - /**/config/puma.rb
+    - /**/config/environments/*.rb
+
+Layout/FirstArrayElementIndentation:
+  Enabled: false
+
+Layout/FirstArgumentIndentation:
+  Enabled: false
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/HashAlignment:
+  EnforcedLastArgumentHashStyle: ignore_implicit
+
+Metrics/MethodLength:
+  Exclude:
+    - /**/db/migrate/*.rb
+
+Metrics/AbcSize:
+  Exclude:
+    - /**/db/migrate/*.rb
+
+Metrics/ClassLength:
+  Exclude:
+    - /**/*_test.rb
+
+Metrics/ModuleLength:
+  Exclude:
+    - /**/test/**/*_assertions.rb
+
+Metrics/BlockLength:
+  Exclude:
+    - /**/config/routes.rb
+    - /**/test/**/*_test.rb
+    - /**/test/**/*_factory.rb
+    - /**/*.rake
+    - /**/config/initializers/devise.rb
+    - /**/config/environments/*.rb
+    - /**/*/*.gemspec
+    - /**/test/**/*_assertions.rb
+
+Lint/SuppressedException:
+  Exclude:
+    - lib/tasks/*.rake
+
+Lint/EmptyBlock:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - /**/test/**/*.rb
+
+Style/SymbolProc:
+  Exclude:
+    - app/serializers/**/*_serializer.rb
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
+Lint/RaiseException:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+
+Style/ExponentialNotation:
+  Enabled: true
+
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+  Exclude:
+    - /**/*_test.rb
+
+Style/SlicingWithRange:
+  Enabled: true
+
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: true
+
+Rails/SkipsModelValidations:
+  Enabled: true
+  Exclude:
+    - /**/*_test.rb
+
+Gemspec/RequiredRubyVersion:
+  Enabled: false
+
+Naming/VariableNumber:
+  Enabled: false
+
+Rails/DynamicFindBy:
+  Enabled: true
+  AllowedMethods:
+    - find_by_sql
+    - find_by_username_or_id!
+
+Rails/I18nLocaleTexts:
+  Enabled: true
+  Exclude:
+    - engines/admin/app/controllers/admin/**/*_controller.rb
+
+Rails/WhereNot:
+  Enabled: true
+
+Rails/WhereExists:
+  Enabled: true
+
+Rails/WhereEquals:
+  Enabled: true
+
+Rails/UnusedIgnoredColumns:
+  Enabled: true
+
+Rails/TransactionExitStatement:
+  Enabled: true
+
+Rails/DefaultScope:
+  Enabled: true
+
+Rails/ReversibleMigrationMethodDefinition:
+  Enabled: true
