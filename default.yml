@@ -29,7 +29,7 @@ Style/Documentation:
   Enabled: false
 
 Layout/LineLength:
-  IgnoredPatterns: ['(\A|\s)#']
+  AllowedPatterns: ['(\A|\s)#']
   Exclude:
     - /**/config/initializers/devise.rb
     - /**/config/puma.rb
