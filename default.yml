@@ -48,7 +48,7 @@ Layout/MultilineOperationIndentation:
   EnforcedStyle: indented
 
 Layout/ArgumentAlignment:
-  EnforcedStyle: with_fixed_indentation
+  EnforcedStyle: with_first_argument
 
 Layout/HashAlignment:
   EnforcedLastArgumentHashStyle: ignore_implicit
