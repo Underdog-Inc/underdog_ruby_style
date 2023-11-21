@@ -36,7 +36,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency "rubocop-minitest"
   spec.add_dependency "rubocop-performance"
   spec.add_dependency "rubocop-rails"
-  spec.add_development_dependency "bundler", "~> 2.3"
-  spec.add_development_dependency "rake", "~> 13.0"
   spec.metadata["rubygems_mfa_required"] = "true"
 end
