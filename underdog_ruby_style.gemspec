@@ -32,11 +32,9 @@ Gem::Specification.new do |spec|
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
-  spec.add_dependency "rubocop", "1.41.1"
+  spec.add_dependency "rubocop", "1.57.2"
   spec.add_dependency "rubocop-minitest"
   spec.add_dependency "rubocop-performance"
   spec.add_dependency "rubocop-rails"
-  spec.add_development_dependency "bundler", "~> 2.3"
-  spec.add_development_dependency "rake", "~> 13.0"
   spec.metadata["rubygems_mfa_required"] = "true"
 end
