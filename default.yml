@@ -1,6 +1,7 @@
 require:
   - 'rubocop-rails'
   - 'rubocop-performance'
+  - './lib/underdog_ruby_style/cop/underdog/faraday_connection_pooling.rb'
 
 AllCops:
   NewCops: enable
