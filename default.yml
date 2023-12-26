@@ -178,3 +178,11 @@ Rails/DefaultScope:
 
 Rails/ReversibleMigrationMethodDefinition:
   Enabled: true
+
+# Below can be removed after added to main rubocop. They are necessary for ruby 3.3.0 upgrade.
+# https://github.com/rubocop/rubocop/issues/12571
+Naming/BlockForwarding:
+  EnforcedStyle: explicit
+
+Style/ArgumentsForwarding:
+  UseAnonymousForwarding: false
